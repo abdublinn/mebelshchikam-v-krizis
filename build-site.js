@@ -562,7 +562,7 @@ function build() {
 
   // sitemap.xml
   const today = new Date().toISOString().slice(0, 10);
-  const baseUrl = 'https://USERNAME.github.io/REPO/';
+  const baseUrl = 'https://abdublinn.github.io/mebelshchikam-v-krizis/';
   const urls = [
     'index.html', 'preface.html', 'about.html', 'conclusion.html',
     ...order.map(o => `articles/${String(o.chapterIdx).padStart(2, '0')}.html`)
