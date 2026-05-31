@@ -8,25 +8,73 @@
 <meta property="og:title" content="Время больших изменений: чему мебельной компании стоит поучиться у стартапов">
 <meta property="og:description" content="Часть III. Новая оптика · Глава 6">
 <meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%238a3a3a'/%3E%3Ctext x='50%25' y='65%25' text-anchor='middle' fill='%23fff' font-family='Georgia' font-size='20' font-weight='700'%3EМ%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237a1b1b'/%3E%3Ctext x='50%25' y='66%25' text-anchor='middle' fill='%23f3e8d4' font-family='Georgia' font-size='20' font-weight='700'%3EМ%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <div class="read-progress" id="readProgress"></div>
-<header class="site-header">
-  <div class="site-header__inner">
-    <a class="site-header__brand" href="../index.html">
-      Мебельщикам в кризис <span class="site-header__brand-sub">— брошюра</span>
-    </a>
-    <nav class="site-header__nav">
-      <a href="../index.html#toc">Содержание</a>
-      <a href="../preface.html">Предисловие</a>
-      <a href="../about.html">Об авторе</a>
-    </nav>
-  </div>
-</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <a class="sidebar__brand" href="../index.html">Мебельщикам в кризис</a>
+  <div class="sidebar__sub">Девять разговоров о том, что делать</div>
 
-<main class="">
+  <nav class="sidebar__nav">
+    <a href="../index.html">Главная</a>
+    <a href="../index.html#preface">Предисловие</a>
+
+    <div class="sidebar__nav-section">Содержание</div>
+    <details>
+<summary><span class="sidebar__part-num">I</span> Зеркало</summary>
+<ul>
+<li><a href="../articles/01.html">Почему мебельщик делает всё как раньше, даже лучше, но продаёт хуже</a></li>
+<li><a href="../articles/02.html">В кризис мебельщикам нужно не «лучше», а проще</a></li>
+</ul>
+</details>
+<details>
+<summary><span class="sidebar__part-num">II</span> Отмазки</summary>
+<ul>
+<li><a href="../articles/03.html">«Нет времени» в мебельном бизнесе: самая дорогая отмазка кризиса</a></li>
+<li><a href="../articles/04.html">В кризис надо не больше работать, а быстрее учиться</a></li>
+</ul>
+</details>
+<details open>
+<summary><span class="sidebar__part-num">III</span> Новая оптика</summary>
+<ul>
+<li><a href="../articles/05.html">Как мебельной компании развиваться, когда заказов мало</a></li>
+<li><a href="../articles/06.html" class="is-active">Время больших изменений: чему мебельной компании стоит поучиться у стартапов</a></li>
+</ul>
+</details>
+<details>
+<summary><span class="sidebar__part-num">IV</span> Рабочие инструменты</summary>
+<ul>
+<li><a href="../articles/07.html">«Я же держал это в голове»: фраза, которая стоит компаниям дороже всего</a></li>
+<li><a href="../articles/08.html">Почему «думает. перезвонить» в CRM это надгробие сделки, а не запись</a></li>
+</ul>
+</details>
+<details>
+<summary><span class="sidebar__part-num">V</span> Взрослый взгляд</summary>
+<ul>
+<li><a href="../articles/09.html">Чем заняться, если бизнес выжил, закрылся вовремя или просто перестал быть интересным</a></li>
+</ul>
+</details>
+
+    <a href="../conclusion.html">Заключение</a>
+
+    <div class="sidebar__nav-section">Автор</div>
+    <a href="../about.html">Об авторе</a>
+  </nav>
+
+  <a class="sidebar__download" href="../Брошюра_Мебельщикам_в_кризис.docx" download>
+    Скачать в Word
+    <span class="sidebar__download-note">.docx · 20 МБ</span>
+  </a>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Меню">☰</button>
+<main>
 
 <article class="article">
   <div class="container">
@@ -116,7 +164,7 @@
 <p>Это не ломает оргструктуру и не превращает фабрику в модный акселератор, это просто позволяет компании не ждать, пока «все как-нибудь само перестроится». Выигрывают не те компании, у которых больше правильных мыслей, а те, у которых мысли быстрее превращаются в ограниченное число сильных проектов.</p>
     </div>
 
-    <p style="margin-top:3rem; padding:1.5rem; background:var(--bg-muted); border-radius:var(--radius); font-family:var(--font-ui); font-size:.95rem; text-align:center">
+    <p class="article__cta">
       Прочитать на Дзене и оставить комментарий: <a href="https://dzen.ru/a/aa01a14QexpK1m1S" target="_blank" rel="noopener">dzen.ru/a/aa01a14QexpK1m1S</a>
     </p>
 
@@ -127,32 +175,43 @@
   </div>
 </article>
 
-</main>
 
 <footer class="site-footer">
   <div class="container-wide">
     <div class="site-footer__row site-footer__links">
       <a href="../index.html">Главная</a>
-      <a href="../preface.html">Предисловие</a>
+      <a href="../index.html#preface">Предисловие</a>
       <a href="../about.html">Об авторе</a>
-      <a href="https://t.me/friday_meb" target="_blank" rel="noopener">Телеграм-канал</a>
+      <a href="https://t.me/ab_dublin" target="_blank" rel="noopener">Телеграм-канал</a>
+      <a href="https://t.me/friday_meb" target="_blank" rel="noopener">Пятничные посты</a>
       <a href="https://dzen.ru/dbs_dubas" target="_blank" rel="noopener">Канал в Дзене</a>
     </div>
-    <div class="site-footer__row">© 2026 Александр Борисович Дублин. Брошюра в свободном доступе.</div>
+    <div class="site-footer__row site-footer__copy">© 2026 Александр Борисович Дублин. Брошюра в свободном доступе.</div>
   </div>
 </footer>
-<script>
-  (function(){
-    var bar = document.getElementById('readProgress');
-    if (!bar) return;
-    function upd(){
-      var h = document.documentElement;
-      var max = (h.scrollHeight - h.clientHeight) || 1;
-      bar.style.width = (Math.min(100, (h.scrollTop / max) * 100)) + '%';
-    }
-    window.addEventListener('scroll', upd, { passive: true });
-    upd();
-  })();
-</script>
+</main>
+</div>
+<script>(function(){
+  var t = document.getElementById('sidebarToggle');
+  var s = document.getElementById('sidebar');
+  var b = document.getElementById('sidebarBackdrop');
+  if (!t || !s) return;
+  function close(){ s.classList.remove('is-open'); b.classList.remove('is-open'); }
+  function open(){ s.classList.add('is-open'); b.classList.add('is-open'); }
+  t.addEventListener('click', function(){ s.classList.contains('is-open') ? close() : open(); });
+  b.addEventListener('click', close);
+  // закрыть по выбору пункта на мобильном
+  s.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if (window.innerWidth <= 900) close(); }); });
+})();(function(){
+  var bar = document.getElementById('readProgress');
+  if (!bar) return;
+  function upd(){
+    var h = document.documentElement;
+    var max = (h.scrollHeight - h.clientHeight) || 1;
+    bar.style.width = (Math.min(100, (h.scrollTop / max) * 100)) + '%';
+  }
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+})();</script>
 </body>
 </html>
