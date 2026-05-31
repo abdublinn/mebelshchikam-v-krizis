@@ -1,0 +1,5 @@
+# Локальные служебные файлы
+.claude/
+.DS_Store
+Thumbs.db
+*.log
