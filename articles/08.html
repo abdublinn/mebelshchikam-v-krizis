@@ -17,10 +17,22 @@
 <body>
 <div class="read-progress" id="readProgress"></div>
 <div class="layout">
-<aside class="sidebar" id="sidebar">
-  <a class="sidebar__brand" href="../index.html">Мебельщикам в кризис</a>
-  <div class="sidebar__sub">Девять разговоров о том, что делать</div>
 
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="../index.html">
+      Мебельщикам в кризис<span class="site-header__brand-sub">— Девять разговоров о том, что делать</span>
+    </a>
+    <nav class="site-header__nav">
+      <a href="../index.html">Главная</a>
+      <a href="../index.html#preface">Предисловие</a>
+      <a href="../about.html">Об авторе</a>
+      <a class="site-header__cta" href="../Брошюра_Мебельщикам_в_кризис.docx" download>Скачать .docx</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar">
   <nav class="sidebar__nav">
     <a href="../index.html">Главная</a>
     <a href="../index.html#preface">Предисловие</a>
@@ -74,6 +86,7 @@
 </aside>
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 <button class="sidebar-toggle" id="sidebarToggle" aria-label="Меню">☰</button>
+
 <main>
 
 <article class="article">
@@ -249,21 +262,20 @@
   </div>
 </article>
 
+</main>
 
 <footer class="site-footer">
-  <div class="container-wide">
-    <div class="site-footer__row site-footer__links">
-      <a href="../index.html">Главная</a>
-      <a href="../index.html#preface">Предисловие</a>
-      <a href="../about.html">Об авторе</a>
+  <div class="site-footer__inner">
+    <div class="site-footer__links">
       <a href="https://t.me/ab_dublin" target="_blank" rel="noopener">Телеграм-канал</a>
       <a href="https://t.me/friday_meb" target="_blank" rel="noopener">Пятничные посты</a>
       <a href="https://dzen.ru/dbs_dubas" target="_blank" rel="noopener">Канал в Дзене</a>
+      <a href="https://t.me/AleksandrBorisovich73" target="_blank" rel="noopener">Связаться</a>
     </div>
-    <div class="site-footer__row site-footer__copy">© 2026 Александр Борисович Дублин. Брошюра в свободном доступе.</div>
+    <div class="site-footer__copy">© 2026 Александр Борисович Дублин</div>
   </div>
 </footer>
-</main>
+
 </div>
 <script>(function(){
   var t = document.getElementById('sidebarToggle');

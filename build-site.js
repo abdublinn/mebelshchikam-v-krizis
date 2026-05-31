@@ -197,9 +197,6 @@ ${chaptersHtml}
   const hasDocx = fs.existsSync(path.join(BROCH, META.outputFilename));
 
   return `<aside class="sidebar" id="sidebar">
-  <a class="sidebar__brand" href="${up}index.html">${esc(SITE_TITLE)}</a>
-  <div class="sidebar__sub">${esc(SITE_SUBTITLE)}</div>
-
   <nav class="sidebar__nav">
     <a href="${up}index.html"${isActive('home')}>Главная</a>
     <a href="${up}index.html#preface"${isActive('preface')}>Предисловие</a>
@@ -270,24 +267,39 @@ function pageLayout({ title, ogDesc, content, depth = 0, active = '', includePro
 <body>
 ${includeProgress ? '<div class="read-progress" id="readProgress"></div>' : ''}
 <div class="layout">
-${renderSidebar(active, GLOBAL_ARTICLES, depth)}
-<main>
-${content}
 
-<footer class="site-footer">
-  <div class="container-wide">
-    <div class="site-footer__row site-footer__links">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="${up}index.html">
+      ${esc(SITE_TITLE)}<span class="site-header__brand-sub">— ${esc(SITE_SUBTITLE)}</span>
+    </a>
+    <nav class="site-header__nav">
       <a href="${up}index.html">Главная</a>
       <a href="${up}index.html#preface">Предисловие</a>
       <a href="${up}about.html">Об авторе</a>
+      ${fs.existsSync(path.join(BROCH, META.outputFilename)) ? `<a class="site-header__cta" href="${up}${esc(META.outputFilename)}" download>Скачать .docx</a>` : ''}
+    </nav>
+  </div>
+</header>
+
+${renderSidebar(active, GLOBAL_ARTICLES, depth)}
+
+<main>
+${content}
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__links">
       ${AUTHOR.telegramGroupUrl ? `<a href="${esc(AUTHOR.telegramGroupUrl)}" target="_blank" rel="noopener">Телеграм-канал</a>` : ''}
       ${AUTHOR.telegramBlogUrl ? `<a href="${esc(AUTHOR.telegramBlogUrl)}" target="_blank" rel="noopener">Пятничные посты</a>` : ''}
       ${AUTHOR.dzenChannelUrl ? `<a href="${esc(AUTHOR.dzenChannelUrl)}" target="_blank" rel="noopener">Канал в Дзене</a>` : ''}
+      ${AUTHOR.telegramPersonalUrl ? `<a href="${esc(AUTHOR.telegramPersonalUrl)}" target="_blank" rel="noopener">Связаться</a>` : ''}
     </div>
-    <div class="site-footer__row site-footer__copy">© ${META.year} ${esc(AUTHOR.displayName || '')}. Брошюра в свободном доступе.</div>
+    <div class="site-footer__copy">© ${META.year} ${esc(AUTHOR.displayName || '')}</div>
   </div>
 </footer>
-</main>
+
 </div>
 <script>${SIDEBAR_JS}${includeProgress ? PROGRESS_JS : ''}</script>
 </body>
