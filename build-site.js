@@ -401,11 +401,11 @@ function renderIndex(articlesByNum) {
   const content = `
 <section class="hero">
   <div class="container">
-    <div class="hero__kicker">Девять статей. Одна логика. Свободное чтение.</div>
+    <div class="hero__kicker">Одиннадцать статей. Одна логика. Свободное чтение.</div>
     <h1 class="hero__title">${esc(SITE_TITLE)}</h1>
     <p class="hero__subtitle">${esc(SITE_SUBTITLE)}</p>
     <p class="hero__intro">
-      Сборник из девяти статей о мебельном бизнесе в нынешнем кризисе.
+      Сборник из одиннадцати статей о мебельном бизнесе в нынешнем кризисе.
       Не учебник и не методичка — разговор с собственником о том, что делать,
       когда привычные действия перестают давать результат.
     </p>
