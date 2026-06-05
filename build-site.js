@@ -194,7 +194,9 @@ ${chaptersHtml}
 </details>`;
   }).join('\n');
 
-  const hasDocx = fs.existsSync(path.join(BROCH, META.outputFilename));
+  const docxPath = path.join(BROCH, META.outputFilename);
+  const hasDocx = fs.existsSync(docxPath);
+  const docxSizeMb = hasDocx ? Math.round(fs.statSync(docxPath).size / 1024 / 1024) : 0;
 
   return `<aside class="sidebar" id="sidebar">
   <nav class="sidebar__nav">
@@ -212,7 +214,7 @@ ${chaptersHtml}
 
   ${hasDocx ? `<a class="sidebar__download" href="${up}${esc(META.outputFilename)}" download>
     Скачать в Word
-    <span class="sidebar__download-note">.docx · 20 МБ</span>
+    <span class="sidebar__download-note">.docx · ${docxSizeMb} МБ</span>
   </a>` : ''}
 </aside>
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -445,7 +447,7 @@ function renderIndex(articlesByNum) {
 
 ${hasDocx ? `<section class="container" style="text-align:center; padding-bottom:3rem">
   <p style="color:var(--text-muted); font-family:var(--font-ui); font-size:.95rem">
-    Удобнее читать офлайн? <a href="${esc(META.outputFilename)}" download>Скачать брошюру в Word (.docx, 20 МБ)</a>
+    Удобнее читать офлайн? <a href="${esc(META.outputFilename)}" download>Скачать брошюру в Word (.docx, ${Math.round(fs.statSync(path.join(BROCH, META.outputFilename)).size / 1024 / 1024)} МБ)</a>
   </p>
 </section>` : ''}
 `;
@@ -585,7 +587,7 @@ function renderArticle(chapterIdx, article, part, prevLink, nextLink) {
 // ── Сборка ───────────────────────────────────────────────────────
 function build() {
   const articlesByNum = {};
-  for (let n = 1; n <= 9; n++) {
+  for (let n = 1; n <= 10; n++) {
     const num = String(n).padStart(2, '0');
     articlesByNum[num] = parseArticle(num);
   }
