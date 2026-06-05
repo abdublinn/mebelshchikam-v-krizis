@@ -587,7 +587,7 @@ function renderArticle(chapterIdx, article, part, prevLink, nextLink) {
 // ── Сборка ───────────────────────────────────────────────────────
 function build() {
   const articlesByNum = {};
-  for (let n = 1; n <= 10; n++) {
+  for (let n = 1; n <= 11; n++) {
     const num = String(n).padStart(2, '0');
     articlesByNum[num] = parseArticle(num);
   }
