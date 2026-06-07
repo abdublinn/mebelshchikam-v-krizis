@@ -401,11 +401,11 @@ function renderIndex(articlesByNum) {
   const content = `
 <section class="hero">
   <div class="container">
-    <div class="hero__kicker">Одиннадцать статей. Одна логика. Свободное чтение.</div>
+    <div class="hero__kicker">Двенадцать статей. Одна логика. Свободное чтение.</div>
     <h1 class="hero__title">${esc(SITE_TITLE)}</h1>
     <p class="hero__subtitle">${esc(SITE_SUBTITLE)}</p>
     <p class="hero__intro">
-      Сборник из одиннадцати статей о мебельном бизнесе в нынешнем кризисе.
+      Сборник из двенадцати статей о мебельном бизнесе в нынешнем кризисе.
       Не учебник и не методичка — разговор с собственником о том, что делать,
       когда привычные действия перестают давать результат.
     </p>
@@ -587,7 +587,7 @@ function renderArticle(chapterIdx, article, part, prevLink, nextLink) {
 // ── Сборка ───────────────────────────────────────────────────────
 function build() {
   const articlesByNum = {};
-  for (let n = 1; n <= 11; n++) {
+  for (let n = 1; n <= 12; n++) {
     const num = String(n).padStart(2, '0');
     articlesByNum[num] = parseArticle(num);
   }
