@@ -264,6 +264,26 @@ em { font-style: italic; }
   margin-top: .2rem;
 }
 
+/* ─── Скачивание брошюры: два формата (PDF / Word) ───────────────── */
+.sidebar__downloads { margin-top: 1.5rem; }
+.sidebar__downloads-title {
+  font-family: var(--font-ui);
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  opacity: .55;
+  text-align: center;
+  margin-bottom: .55rem;
+}
+.sidebar__downloads .sidebar__download { margin-top: .5rem; }
+.site-header__nav a.site-header__cta--ghost {
+  background: transparent !important;
+  color: #7a1b1b !important;
+  border: 1px solid #7a1b1b !important;
+  margin-left: .4rem;
+}
+.site-header__nav a.site-header__cta--ghost:hover { background: #7a1b1b !important; color: #fff !important; }
+
 .sidebar-backdrop { display: none; }
 
 /* Бургер для мобильного */
